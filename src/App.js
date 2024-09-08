@@ -66,7 +66,7 @@ function App() {
                 )}
 
                 <form onSubmit={handleSubmit}>
-                    <h1>Sign Up</h1>
+                    <h1>Sign Up (testing app)</h1>
                     <div className="ui divider"></div>
                     <div className="ui form">
                         <div className="field" data-cy="username">
