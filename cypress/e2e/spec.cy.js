@@ -18,7 +18,7 @@ describe('Login app E2E tests', () => {
     cy.get('[data-cy="confirm-password"] > p').should('not.exist')
   })
 
-  it('Shows failed validations after clicking Submit', () => {
+  it('Shows success message when signed in', () => {
     cy.get('[data-cy="username"] > input').type('whatever')
     cy.get('[data-cy="password"] > input').type('whatever')
     cy.get('[data-cy="confirm-password"] > input').type('whatever')
@@ -45,7 +45,9 @@ describe('Login app E2E tests', () => {
     cy.get('[data-cy="email"] + p').should('be.visible').should('have.text','This is not a valid email format!')
   })
   
-  it('Shows validation error message when password is less then 4 chars', () => {})
+  it('Shows validation error message when password is less then 4 chars', () => {
+
+  })
   it('Shows validation error message when password is more than 10 chars', () => {})
   it('Shows validation error message when passwords dont match', () => {})
 })
