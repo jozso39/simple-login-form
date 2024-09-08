@@ -58,7 +58,7 @@ function App() {
             <div className="bgImg"></div>
             <div className="container">
                 {Object.keys(formErrors).length === 0 && isSubmit ? (
-                    <div className="ui message success">
+                    <div className="ui message success" data-cy="message-success">
                         Signed in successfully
                     </div>
                 ) : (
@@ -69,7 +69,7 @@ function App() {
                     <h1>Sign Up</h1>
                     <div className="ui divider"></div>
                     <div className="ui form">
-                        <div className="field">
+                        <div className="field" data-cy="username">
                             <label>Username</label>
                             <input
                                 type="text"
@@ -79,8 +79,8 @@ function App() {
                                 onChange={handleChange}
                             />
                         </div>
-                        <p>{formErrors.username}</p>
-                        <div className="field">
+                        <p data-cy="error">{formErrors.username}</p>
+                        <div className="field" data-cy="email">
                             <label>Email</label>
                             <input
                                 type="text"
@@ -90,8 +90,8 @@ function App() {
                                 onChange={handleChange}
                             />
                         </div>
-                        <p>{formErrors.email}</p>
-                        <div className="field">
+                        <p data-cy="error">{formErrors.email}</p>
+                        <div className="field" data-cy="password">
                             <label>Password</label>
                             <input
                                 type="password"
@@ -101,8 +101,8 @@ function App() {
                                 onChange={handleChange}
                             />
                         </div>
-                        <p>{formErrors.password}</p>
-                        <div className="field">
+                        <p data-cy="error">{formErrors.password}</p>
+                        <div className="field" data-cy="confirm-password">
                             <label>Confirm Password</label>
                             <input
                                 type="password"
@@ -112,8 +112,8 @@ function App() {
                                 onChange={handleChange}
                             />
                         </div>
-                        <p>{formErrors.confirmPassword}</p>
-                        <button className="fluid ui button blue">Submit</button>
+                        <p data-cy="error">{formErrors.confirmPassword}</p>
+                        <button className="fluid ui button blue" data-cy="submit-button">Submit</button>
                     </div>
                 </form>
                 <div className="text">
