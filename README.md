@@ -1,7 +1,8 @@
-# Simple React Login Form
+# Simple React Sign-up Form
+For showcasing E2E testing on local environment.
+## Installation and start
+1. npm i
+1. npm run build
+1. npm run start
 
-<hr>
-
-See live @ [pb-react-form.netlify.app](https://pb-react-form.netlify.app)
-
-![ScreenShot](https://raw.githubusercontent.com/pawelborkar/react-login-form/master/ScreenShot.png)
+![ScreenShot](./screenshot.png)
