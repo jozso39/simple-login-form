@@ -41,14 +41,14 @@ function App() {
             errors.email = "This is not a valid email format!";
         }
         if (!values.password) {
-            errors.password = "Password is required";
+            errors.password = "Password is required!";
         } else if (values.password.length < 4) {
-            errors.password = "Password must be more than 4 characters";
+            errors.password = "Password must be more than 4 characters!";
         } else if (values.password.length > 10) {
-            errors.password = "Password cannot exceed more than 10 characters";
+            errors.password = "Password cannot exceed more than 10 characters!";
         }
         if (values.password !== values.confirmPassword) {
-            errors.confirmPassword = "Those passwords didn’t match. Try again.";
+            errors.confirmPassword = "Those passwords didn’t match! Try again.";
         }
         return errors;
     };
@@ -78,8 +78,9 @@ function App() {
                                 value={formValues.username}
                                 onChange={handleChange}
                             />
+                            <p data-cy="error">{formErrors.username}</p>
                         </div>
-                        <p data-cy="error">{formErrors.username}</p>
+
                         <div className="field" data-cy="email">
                             <label>Email</label>
                             <input
@@ -89,8 +90,9 @@ function App() {
                                 value={formValues.email}
                                 onChange={handleChange}
                             />
+                            <p data-cy="error">{formErrors.email}</p>
                         </div>
-                        <p data-cy="error">{formErrors.email}</p>
+
                         <div className="field" data-cy="password">
                             <label>Password</label>
                             <input
@@ -100,8 +102,9 @@ function App() {
                                 value={formValues.password}
                                 onChange={handleChange}
                             />
+                            <p data-cy="error">{formErrors.password}</p>
                         </div>
-                        <p data-cy="error">{formErrors.password}</p>
+
                         <div className="field" data-cy="confirm-password">
                             <label>Confirm Password</label>
                             <input
@@ -111,8 +114,9 @@ function App() {
                                 value={formValues.confirmPassword}
                                 onChange={handleChange}
                             />
+                            <p data-cy="error">{formErrors.confirmPassword}</p>
                         </div>
-                        <p data-cy="error">{formErrors.confirmPassword}</p>
+
                         <button className="fluid ui button blue" data-cy="submit-button">Submit</button>
                     </div>
                 </form>
